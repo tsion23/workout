@@ -1,4 +1,36 @@
-a chapter from author1
+Part of being a good developer is writing readable code.  Once you have not looked at your code for a few months, you forget the logic.  That will force you to read back through your code.  Formatting your code correctly will make it easier to spot out errors and fix problems that may occur.  Your code may also need to be viewed by another developer.  In this case, you want to make it easier for others to come behind you and read your code.  It’s okay to put comments in your code.  If you have some complicated logic and you don’t want to have to read through the code to understand it, simply write a comment explaining the details.  
+/*
+This statement is getting an employee count for a big shot named Ali
+*/
+SELECT	deptid,COUNT(*) DeptEmpCnt
+FROM		emp
+WHERE		empid = 1
+AND		empname = 'Ali'
+GROUP BY	deptid
+HAVING	COUNT(*) > 1
+ORDER BY	deptid
 
-biruktawit
- edit 2 huyuy
+
+Put Keywords on their own separate line.  When you get an error, you can double click on the error and it takes you to the line where the mistake is.  If your code is all on one line, you won’t be able to easily spot the mistake – for example.
+
+/*
+This statement is getting an employee count for a big shot named Ali
+*/
+SELECT deptid,COUNT(*) DeptEmpCnt FROM emp WHERE empid = 1 AND 
+empname = 'Ali' GROUP BY deptid HAVING COUNT(*) > 1 ORDER BY deptid
+
+ Tab over so your 1st column is lined up with your table name / WHERE Clause column etc… (This makes it much easier to read over the following.
+
+/*
+This statement is getting an employee count for a big shot named Ali
+*/
+SELECT deptid,COUNT(*) DeptEmpCnt
+FROM emp
+WHERE	empid = 1
+AND empname = 'Ali'
+GROUP BY deptid
+HAVING COUNT(*) > 1
+ORDER BY deptid
+If you have nested data, line up your BEGIN and END together so it’s easy to see the start and the finish.  Everytime you nest more statements, use tabs.  This increases readability tremendously.
+
+
